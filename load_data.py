@@ -8,9 +8,9 @@ class Lang:
     def __init__(self, name):
         self.name = name
         self.word2index = {}
-        self.word2count = {}
-        self.index2word = {0: "SOS", 1: "EOS"}
-        self.n_words = 2  # Count SOS and EOS
+        self.word2count = {"SOS": 0, "EOS": 1, "PAD": 2}
+        self.index2word = {0: "SOS", 1: "EOS", 2: "PAD"}
+        self.n_words = 3  # Count SOS and EOS
 
     def add_sentence(self, sentence):
         for word in sentence.split(' '):
@@ -85,5 +85,3 @@ def prepare_data(lang1, lang2, max_length=None, reverse=False):
     print(input_lang.name, input_lang.n_words)
     print(output_lang.name, output_lang.n_words)
     return input_lang, output_lang, pairs
-
-

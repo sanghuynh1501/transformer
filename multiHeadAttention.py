@@ -6,7 +6,7 @@ from torch import nn
 
 
 class MultiHeadAttention(nn.Module):
-    def __init__(self, heads, d_model, dropout=0.1):
+    def __init__(self, heads, d_model, dropout=0.3):
         super().__init__()
 
         self.d_model = d_model

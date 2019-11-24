@@ -1,2 +1,5 @@
-data
+data/eng-vie.txt
 venv
+model/transformer.pt
+word_vector/glove.6B.300d.txt
+word_vector/vn_word2vec_300d.txt

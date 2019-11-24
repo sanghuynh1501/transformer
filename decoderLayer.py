@@ -8,7 +8,7 @@ from norm import Norm
 
 
 class DecoderLayer(nn.Module):
-    def __init__(self, d_model, heads, dropout=0.1):
+    def __init__(self, d_model, heads, dropout=0.2):
         super().__init__()
         self.norm_1 = Norm(d_model)
         self.norm_2 = Norm(d_model)
@@ -31,3 +31,4 @@ class DecoderLayer(nn.Module):
         x2 = self.norm_3(x)
         x = x + self.dropout_3(self.ff(x2))
         return x
+
